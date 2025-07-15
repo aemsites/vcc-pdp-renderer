@@ -15,31 +15,6 @@ import { resolveConfig } from './utils/config.js';
 import handlers from './routes/index.js';
 
 /**
- * @param {import("@cloudflare/workers-types").Request} req
- */
-async function parseData(req) {
-  if (['GET', 'HEAD', 'OPTIONS'].includes(req.method)) {
-    return Object.fromEntries(new URL(req.url).searchParams.entries());
-  }
-  if (['POST', 'PUT', 'PATCH'].includes(req.method)) {
-    const text = await req.text();
-    if (text.trim().length) {
-      try {
-        return JSON.parse(text);
-      } catch {
-        return text;
-      }
-    }
-
-    const params = new URL(req.url).searchParams;
-    if (params.size) {
-      return Object.fromEntries(params.entries());
-    }
-  }
-  return {};
-}
-
-/**
  * @param {import("@cloudflare/workers-types/experimental").ExecutionContext} eCtx
  * @param {import("@cloudflare/workers-types").Request} req
  * @param {Env} env
@@ -66,7 +41,6 @@ export async function makeContext(eCtx, req, env) {
         .map(([k, v]) => [k.toLowerCase(), v]),
     ),
   };
-  ctx.data = await parseData(req);
   return ctx;
 }
 
