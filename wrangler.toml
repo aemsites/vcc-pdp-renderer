@@ -1,0 +1,56 @@
+name = "vcc-pdp-renderer"
+main = "dist/index.mjs"
+compatibility_date = "2024-03-21"
+account_id = "852dfa4ae1b0d579df29be65b986c101"
+workers_dev = true
+send_metrics = false
+
+build = { command = "npm install && node build.js" }
+
+kv_namespaces = [
+  { binding = "CONFIGS", id = "f1d03fa1f5ab41ed8c8f349029af4351", preview_id = "f1d03fa1f5ab41ed8c8f349029af4351" }
+]
+
+[vars]
+VERSION = "@@VERSION@@-dev"
+ENVIRONMENT = "dev"
+
+[observability]
+enabled = true
+head_sampling_rate = 1
+
+# ----------------------------------------------------------------------
+# ci environment
+
+[env.ci]
+name = "vcc-pdp-renderer-ci"
+
+kv_namespaces = [
+  { binding = "CONFIGS", id = "f1d03fa1f5ab41ed8c8f349029af4351", preview_id = "f1d03fa1f5ab41ed8c8f349029af4351" }
+]
+
+[env.ci.vars]
+VERSION = "@@VERSION@@-ci"
+ENVIRONMENT = "ci"
+
+[env.ci.observability]
+enabled = true
+head_sampling_rate = 1
+
+# ----------------------------------------------------------------------
+# production environment
+
+[env.production]
+name = "vcc-pdp-renderer"
+
+kv_namespaces = [
+  { binding = "CONFIGS", id = "f1d03fa1f5ab41ed8c8f349029af4351", preview_id = "f1d03fa1f5ab41ed8c8f349029af4351" }
+]
+
+[env.production.vars]
+VERSION = "@@VERSION@@"
+ENVIRONMENT = "prod"
+
+[env.production.observability]
+enabled = true
+head_sampling_rate = 1
