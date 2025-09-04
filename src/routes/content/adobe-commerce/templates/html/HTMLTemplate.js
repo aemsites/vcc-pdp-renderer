@@ -273,7 +273,7 @@ ${HTMLTemplate.indent(this.renderProductItems(opt.items), 2)}`).join('\n')}
       return null;
     }
 
-    if (!this.ctx.config.imageParams) {
+    if (!this.ctx.config.imageParams && !this.ctx.config.rawImageParams) {
       return image;
     }
 
