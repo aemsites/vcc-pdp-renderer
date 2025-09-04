@@ -273,7 +273,7 @@ ${HTMLTemplate.indent(this.renderProductItems(opt.items), 2)}`).join('\n')}
       return null;
     }
 
-    if (!this.ctx.config.imageParams) {
+    if (!this.ctx.config.imageParams && !this.ctx.config.rawImageParams) {
       return image;
     }
 
@@ -290,6 +290,7 @@ ${HTMLTemplate.indent(this.renderProductItems(opt.items), 2)}`).join('\n')}
     }
 
     url.search = params.toString();
+    url.search += this.ctx.config.rawImageParams || '';
     return {
       url: url.toString(),
       label,

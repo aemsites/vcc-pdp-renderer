@@ -162,6 +162,9 @@ declare global {
      */
     imageParams?: Record<string, string>;
 
+    /** Added verbatim to image URLs, following any `imageParams` */
+    rawImageParams?: string;
+
     // required for non-base entries
     pageType: 'product' | string;
 
@@ -229,6 +232,7 @@ declare global {
     attributeOverrides?: AttributeOverrides;
     siteOverrides?: Record<string, Record<string, unknown>>;
     imageParams?: Record<string, string>;
+    rawImageParams?: string;
     variantAttributes?: string[];
     liveSearchEnabled?: boolean;
     confMap: ConfigMap;
