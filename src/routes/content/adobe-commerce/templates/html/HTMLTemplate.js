@@ -290,6 +290,7 @@ ${HTMLTemplate.indent(this.renderProductItems(opt.items), 2)}`).join('\n')}
     }
 
     url.search = params.toString();
+    url.search += this.ctx.config.rawImageParams || '';
     return {
       url: url.toString(),
       label,
