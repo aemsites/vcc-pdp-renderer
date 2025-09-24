@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/aemsites/vcc-pdp-renderer/compare/v1.0.1...v1.0.2) (2025-09-24)
+
+
+### Bug Fixes
+
+* remove variant attr indent ([9ce1ac9](https://github.com/aemsites/vcc-pdp-renderer/commit/9ce1ac91c4d0c36bf717e8291f2aa2fef8911ae6))
+
 ## [1.0.1](https://github.com/aemsites/vcc-pdp-renderer/compare/v1.0.0...v1.0.1) (2025-09-04)
 
 
