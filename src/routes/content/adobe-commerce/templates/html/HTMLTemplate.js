@@ -193,8 +193,8 @@ ${HTMLTemplate.indent(this.renderJSONLD(), 2)}
 <div class="product-images">
   <div>
     ${images.map(this.constructImage.bind(this))
-    .filter((img) => Boolean(img))
-    .map((img) => /* html */ `\
+        .filter((img) => Boolean(img))
+        .map((img) => /* html */ `\
       <div>
         <picture>
           <source type="image/webp" srcset="${img.url}" alt="" media="(min-width: 600px)">
@@ -203,7 +203,7 @@ ${HTMLTemplate.indent(this.renderJSONLD(), 2)}
           <img loading="lazy" alt="${img.label}" src="${img.url}">
         </picture>
       </div>`)
-    .join('\n')}
+        .join('\n')}
   </div>
 </div>`;
   }
@@ -385,7 +385,7 @@ ${this.variants?.map((v) => /* html */`\
     <div></div>
   </div>
   ${v.attributes?.filter((a) => (this.ctx.config?.variantAttributes
-    ? this.ctx.config.variantAttributes.includes(a.name) : true)).map((attribute) => /* html */`\
+      ? this.ctx.config.variantAttributes.includes(a.name) : true)).map((attribute) => /* html */`\
     <div>
       <div>attribute</div>
       <div>${attribute.name}</div>
@@ -408,8 +408,8 @@ ${this.variants?.map((v) => /* html */`\
     return /* html */ `\
 <div class="product-links">
 ${links.map((link) => {
-    const url = this.jsonTemplate.constructProductURL(undefined, link);
-    return /* html */`\
+      const url = this.jsonTemplate.constructProductURL(undefined, link);
+      return /* html */`\
   <div>
     <div>${link.sku}</div>
     <div><a href="${url}">${url}</a></div>
@@ -418,8 +418,8 @@ ${links.map((link) => {
       ${HTMLTemplate.indent(this.renderLinkPrices(link.prices), 6)}
     </div>
   </div>`;
-  }).join('\n')
-}`;
+    }).join('\n')
+      }`;
   }
 
   /**
@@ -450,7 +450,7 @@ ${HTMLTemplate.indent(this.renderProductImages(defaultImages), 8)}
 ${HTMLTemplate.indent(this.renderProductAttributes(attributes), 8)}
 ${HTMLTemplate.indent(this.renderProductOptions(options), 8)}
 ${HTMLTemplate.indent(this.renderProductVariants(), 8)}
-${HTMLTemplate.indent(this.renderProductVariantsAttributes(), 8)}
+${this.renderProductVariantsAttributes()}
 ${HTMLTemplate.indent(this.renderProductLinks(), 8)}
       </div>
     </main>
