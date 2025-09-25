@@ -13,6 +13,4 @@
 /**
  * @type {Record<string, typeof import('../HTMLTemplate.js').HTMLTemplate>}
  */
-export default {
-  'visualcomfort--adobe-edge-stage': (await import('./visualcomfort--adobe-edge-stage.js')).default,
-};
+export default {};
