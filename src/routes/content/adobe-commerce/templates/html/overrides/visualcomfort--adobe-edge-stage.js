@@ -10,9 +10,21 @@
  * governing permissions and limitations under the License.
  */
 
+/* eslint-disable class-methods-use-this */
+
+import { HTMLTemplate } from '../HTMLTemplate.js';
+
 /**
- * @type {Record<string, typeof import('../HTMLTemplate.js').HTMLTemplate>}
+ * @typedef {import('../../../types.d.ts').Product} Product
+ * @typedef {import('../../../types.d.ts').Variant} Variant
  */
-export default {
-  'visualcomfort--adobe-edge-stage': (await import('./visualcomfort--adobe-edge-stage.js')).default,
-};
+
+export default class extends HTMLTemplate {
+  renderVariantImages() {
+    return '';
+  }
+
+  renderProductImages() {
+    return '';
+  }
+}
