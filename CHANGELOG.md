@@ -1,3 +1,11 @@
+## [1.0.3](https://github.com/aemsites/vcc-pdp-renderer/compare/v1.0.2...v1.0.3) (2025-09-25)
+
+
+### Bug Fixes
+
+* remove product images for adobe-edge-stage ([9fbef8f](https://github.com/aemsites/vcc-pdp-renderer/commit/9fbef8fe1f2b4c044777c5a3df119bcb1767e0fe))
+* remove product images for adobe-edge-stage ([cf518fc](https://github.com/aemsites/vcc-pdp-renderer/commit/cf518fc38c81edb0bad28676efbbcc8803b63901))
+
 ## [1.0.2](https://github.com/aemsites/vcc-pdp-renderer/compare/v1.0.1...v1.0.2) (2025-09-24)
 
 
