@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/aemsites/vcc-pdp-renderer/compare/v1.0.3...v1.0.4) (2025-09-25)
+
+
+### Bug Fixes
+
+* revert remove images for stage ([4baff76](https://github.com/aemsites/vcc-pdp-renderer/commit/4baff76bb6dc65c3483791f2b392c111ee30be44))
+
 ## [1.0.3](https://github.com/aemsites/vcc-pdp-renderer/compare/v1.0.2...v1.0.3) (2025-09-25)
 
 
