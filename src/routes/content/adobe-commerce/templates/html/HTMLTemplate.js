@@ -179,7 +179,6 @@ ${HTMLTemplate.indent(this.renderOpenGraphMetaTags(), 2)}
 ${HTMLTemplate.indent(this.renderTwitterMetaTags(), 2)}
 ${HTMLTemplate.indent(this.renderCommerceMetaTags(), 2)}
 ${HTMLTemplate.indent(this.renderHelixDependencies(), 2)}
-${HTMLTemplate.indent(this.renderJSONLD(), 2)}
 </head>`;
   }
 
